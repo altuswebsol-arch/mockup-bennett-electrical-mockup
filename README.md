@@ -1,5 +1,7 @@
 # Bennett Electrical Mockup — Website Mockup Concept
 
+**Live demo:** https://altuswebsol-arch.github.io/mockup-bennett-electrical-mockup/
+
 A homepage redesign concept for **Bennett Electrical Mockup** — a electrical business.
 
 ## Design
