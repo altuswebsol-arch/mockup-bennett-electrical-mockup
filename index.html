@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bennett Electrical Services | Electricians in Birmingham &amp; Solihull in Birmingham</title>
+<style>
+:root{
+  --altus:#10B3FE; --altus-dark:#0a8fd4;
+  --navy:#0a0f24; --navy2:#111832;
+  --gold:#c9a227;
+  --text:#1a2332; --muted:#5b6b82; --light:#f4f7fb;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--text);line-height:1.6;background:#fff}
+a{text-decoration:none}
+/* ---------- top bar ---------- */
+.topbar{background:var(--navy);color:#fff;font-size:13px;padding:8px 0}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;max-width:1140px;margin:0 auto;padding:0 20px}
+.topbar a{color:var(--altus);font-weight:600}
+/* ---------- nav ---------- */
+.nav{background:#fff;box-shadow:0 2px 12px rgba(0,0,0,.08);position:sticky;top:0;z-index:50}
+.nav .wrap{max-width:1140px;margin:0 auto;padding:14px 20px;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:22px;font-weight:800;color:var(--navy)}
+.logo span{color:var(--altus)}
+.navlinks{display:flex;gap:26px;align-items:center}
+.navlinks a{color:var(--navy);font-weight:600;font-size:15px}
+.btn{display:inline-block;padding:13px 30px;border-radius:10px;font-weight:700;font-size:16px;transition:.2s;border:none;cursor:pointer}
+.btn-blue{background:var(--altus);color:#04121f}
+.btn-blue:hover{background:var(--altus-dark);transform:translateY(-1px)}
+.btn-outline{border:2px solid #fff;color:#fff;background:transparent}
+.btn-outline:hover{background:rgba(255,255,255,.12)}
+.btn-nav{padding:10px 22px;font-size:15px}
+/* ---------- hero ---------- */
+.hero{background:linear-gradient(120deg,#0a0f24 0%,#14204a 60%,#0a0f24 100%);color:#fff;padding:90px 0 100px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(16,179,254,.25),transparent 70%)}
+.hero .wrap{max-width:1140px;margin:0 auto;padding:0 20px;position:relative;z-index:1}
+.eyebrow{display:inline-block;background:rgba(16,179,254,.15);border:1px solid rgba(16,179,254,.5);color:var(--altus);font-weight:700;font-size:13px;letter-spacing:2px;text-transform:uppercase;padding:8px 18px;border-radius:30px;margin-bottom:22px}
+.hero h1{font-size:clamp(34px,5vw,58px);line-height:1.15;font-weight:800;margin-bottom:18px;max-width:640px}
+.hero h1 em{font-style:normal;color:var(--altus)}
+.hero p{font-size:19px;color:#c6d2e3;max-width:560px;margin-bottom:34px}
+.hero-cta{display:flex;gap:16px;flex-wrap:wrap}
+.trust{display:flex;gap:28px;margin-top:44px;flex-wrap:wrap}
+.trust div{display:flex;align-items:center;gap:10px;color:#c6d2e3;font-size:15px;font-weight:600}
+.trust .tick{width:26px;height:26px;border-radius:50%;background:var(--altus);color:#04121f;display:inline-flex;align-items:center;justify-content:center;font-weight:800;font-size:15px}
+/* ---------- strip ---------- */
+.strip{background:var(--altus);color:#04121f;padding:16px 0;font-weight:700;font-size:16px;text-align:center}
+/* ---------- sections ---------- */
+section{padding:80px 0}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+.sec-head{text-align:center;max-width:640px;margin:0 auto 52px}
+.sec-head .kicker{color:var(--altus-dark);font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:13px}
+.sec-head h2{font-size:clamp(28px,4vw,42px);font-weight:800;color:var(--navy);margin:10px 0 14px}
+.sec-head p{color:var(--muted);font-size:18px}
+/* services */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:26px}
+.card{background:#fff;border:1px solid #e6ecf3;border-radius:16px;padding:36px 30px;transition:.25s;position:relative;overflow:hidden}
+.card::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:var(--altus);transform:scaleX(0);transform-origin:left;transition:.25s}
+.card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(10,15,36,.12)}
+.card:hover::before{transform:scaleX(1)}
+.card .icon{width:58px;height:58px;border-radius:14px;background:rgba(16,179,254,.12);display:flex;align-items:center;justify-content:center;font-size:28px;margin-bottom:20px}
+.card h3{font-size:20px;color:var(--navy);margin-bottom:10px}
+.card p{color:var(--muted);font-size:16px}
+/* why */
+.why{background:var(--navy);color:#fff}
+.why .sec-head h2{color:#fff}
+.why .sec-head p{color:#a9b8d0}
+.whygrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:30px;margin-top:10px}
+.whyitem{background:var(--navy2);border:1px solid rgba(16,179,254,.25);border-radius:14px;padding:30px 26px}
+.whyitem .n{font-size:15px;font-weight:800;color:var(--altus);letter-spacing:1px}
+.whyitem h3{font-size:19px;margin:8px 0 10px}
+.whyitem p{color:#a9b8d0;font-size:15px}
+/* areas */
+.areas{background:var(--light)}
+.arealist{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:8px}
+.arealist span{background:#fff;border:1px solid #dbe4ef;padding:10px 22px;border-radius:30px;font-weight:600;color:var(--navy);font-size:15px}
+/* cta */
+.cta{background:linear-gradient(120deg,#0a0f24,#1a2a5e);color:#fff;text-align:center;padding:90px 0}
+.cta h2{font-size:clamp(30px,4.5vw,48px);font-weight:800;margin-bottom:16px}
+.cta h2 em{font-style:normal;color:var(--altus)}
+.cta p{color:#c6d2e3;font-size:19px;max-width:560px;margin:0 auto 34px}
+.bigphone{font-size:clamp(28px,4vw,44px);font-weight:800;color:#fff;margin-bottom:26px;display:block}
+.bigphone:hover{color:var(--altus)}
+/* contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start}
+@media(max-width:800px){.contact-grid{grid-template-columns:1fr}.navlinks{display:none}}
+.cinfo h3{font-size:22px;color:var(--navy);margin-bottom:18px}
+.crow{display:flex;gap:14px;margin-bottom:18px;align-items:flex-start}
+.crow .ic{width:44px;height:44px;flex:0 0 44px;border-radius:10px;background:rgba(16,179,254,.12);display:flex;align-items:center;justify-content:center;font-size:20px}
+.crow b{display:block;color:var(--navy)}
+.crow span{color:var(--muted)}
+.hours{background:var(--light);border-radius:12px;padding:22px;margin-top:8px}
+.hours h4{color:var(--navy);margin-bottom:10px}
+.hours div{display:flex;justify-content:space-between;font-size:15px;color:var(--muted);padding:4px 0}
+.form{background:#fff;border:1px solid #e6ecf3;border-radius:16px;padding:34px;box-shadow:0 12px 34px rgba(10,15,36,.08)}
+.form h3{color:var(--navy);font-size:22px;margin-bottom:6px}
+.form p{color:var(--muted);font-size:15px;margin-bottom:20px}
+.form input,.form textarea,.form select{width:100%;padding:14px 16px;border:1.5px solid #dbe4ef;border-radius:10px;font-size:16px;margin-bottom:14px;font-family:inherit}
+.form input:focus,.form textarea:focus,.form select:focus{outline:none;border-color:var(--altus)}
+.form button{width:100%}
+/* footer */
+footer{background:var(--navy);color:#8fa0ba;padding:44px 0 30px;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px;align-items:center}
+footer .flogo{color:#fff;font-weight:800;font-size:20px}
+footer .flogo span{color:var(--altus)}
+.mocknote{margin-top:26px;padding:26px 20px 8px;border-top:1px solid rgba(255,255,255,.1);text-align:center}
+.mocknote .badge{display:inline-block;border:1.5px solid var(--altus);border-radius:30px;padding:10px 28px;font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--altus);margin-bottom:12px}
+.mocknote p{color:#6b7c96;font-size:13.5px;max-width:620px;margin:0 auto}
+.mocknote a{color:var(--altus)}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap">
+  <span>Electricians — Birmingham &amp; Solihull</span>
+  <span>Call now: <a href="tel:07779986055">07779 986055</a></span>
+</div></div>
+
+<nav class="nav"><div class="wrap">
+  <div class="logo"><span>Bennett</span> Electrical Services</div>
+  <div class="navlinks">
+    <a href="#services">Services</a><a href="#why">Why Us</a><a href="#areas">Areas</a><a href="#contact">Contact</a>
+    <a class="btn btn-blue btn-nav" href="tel:07779986055">Get a Free Quote</a>
+  </div>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <div class="eyebrow">Birmingham's Local Electricians</div>
+  <h1>Safe, Tidy Electrics <em>for Your Home.</em></h1>
+  <p>Rewires, fuse boards, lighting, alarms and CCTV — domestic electrical work across Birmingham and Solihull, done safely and neatly.</p>
+  <div class="hero-cta">
+    <a class="btn btn-blue" href="tel:07779986055">📞 07779 986055</a>
+    <a class="btn btn-outline" href="#contact">Get a Free Quote</a>
+  </div>
+  <div class="trust">
+    <div><span class="tick">✓</span>Domestic specialists</div>
+    <div><span class="tick">✓</span>Rewires &amp; fuse boards</div>
+    <div><span class="tick">✓</span>Alarms &amp; CCTV</div>
+  </div>
+</div></header>
+
+<div class="strip">💡 Free advice on your electrics — just call and ask.</div>
+
+<section id="services"><div class="wrap">
+  <div class="sec-head">
+    <div class="kicker">Our Services</div>
+    <h2>Domestic Electrical Services</h2>
+    <p>Everything your home's electrics need.</p>
+  </div>
+  <div class="cards">
+    <div class="card"><div class="icon">🔌</div><h3>Rewires</h3><p>Full and partial rewires with minimal mess and disruption.</p></div>
+    <div class="card"><div class="icon">📦</div><h3>Fuse Boards</h3><p>Consumer unit upgrades for safer, compliant electrics.</p></div>
+    <div class="card"><div class="icon">💡</div><h3>Lighting</h3><p>Indoor and outdoor lighting design and installation.</p></div>
+    <div class="card"><div class="icon">🔔</div><h3>Alarms &amp; CCTV</h3><p>Burglar alarms and CCTV systems for peace of mind.</p></div>
+    <div class="card"><div class="icon">🔍</div><h3>Fault Finding</h3><p>Quick diagnosis of tripping circuits and electrical faults.</p></div>
+    <div class="card"><div class="icon">📋</div><h3>Safety Checks</h3><p>Electrical safety inspections and landlord certificates.</p></div>
+  </div>
+</div></section>
+
+<section id="why" class="why"><div class="wrap">
+  <div class="sec-head">
+    <div class="kicker">Why Choose Us</div>
+    <h2>Why Homeowners Choose Bennett</h2>
+    <p>A local electrician who treats your home with respect.</p>
+  </div>
+  <div class="whygrid">
+    <div class="whyitem"><div class="n">01</div><h3>Tidy workmanship</h3><p>Dust sheets down, shoes covered, mess cleared.</p></div>
+    <div class="whyitem"><div class="n">02</div><h3>Honest advice</h3><p>We'll tell you what you need — not what pads the bill.</p></div>
+    <div class="whyitem"><div class="n">03</div><h3>Fair pricing</h3><p>Sensible rates with written quotes.</p></div>
+    <div class="whyitem"><div class="n">04</div><h3>Local</h3><p>Based in Sheldon, serving Birmingham and Solihull.</p></div>
+  </div>
+</div></section>
+
+<section id="areas" class="areas"><div class="wrap">
+  <div class="sec-head">
+    <div class="kicker">Service Areas</div>
+    <h2>Proudly Serving Birmingham &amp; Surrounding Areas</h2>
+    <p>Based in Birmingham, we cover homes and businesses across the region.</p>
+  </div>
+  <div class="arealist"><span>Sheldon</span><span>Birmingham</span><span>Solihull</span><span>Acocks Green</span><span>Yardley</span><span>Hall Green</span><span>Knowle</span></div>
+</div></section>
+
+<section class="cta"><div class="wrap">
+  <h2>Electrics Playing Up? <em>Call Bennett.</em></h2>
+  <p>One call and we'll sort it — safely and tidily.</p>
+  <a class="bigphone" href="tel:07779986055">07779 986055</a>
+  <a class="btn btn-blue" href="#contact">Request Your Free Quote</a>
+</div></section>
+
+<section id="contact"><div class="wrap">
+  <div class="sec-head">
+    <div class="kicker">Get In Touch</div>
+    <h2>Contact Bennett</h2>
+    <p>Call, message or send the form — we reply fast.</p>
+  </div>
+  <div class="contact-grid">
+    <div class="cinfo">
+      <h3>Contact Details</h3>
+      <div class="crow"><div class="ic">📞</div><div><b>Phone</b><span>07779 986055 (placeholder — your real number here)</span></div></div>
+      <div class="crow"><div class="ic">✉️</div><div><b>Email</b><span>info@bennettelectricalservices.co.uk (placeholder — your real email here)</span></div></div>
+      <div class="crow"><div class="ic">📍</div><div><b>Based in</b><span>Birmingham</span></div></div>
+      <div class="hours"><h4>Opening Hours</h4><div><span>Monday – Friday</span><span>8:00am – 6:00pm</span></div><div><span>Saturday</span><span>9:00am – 2:00pm</span></div><div><span>Sunday</span><span>Closed</span></div></div>
+    </div>
+    <form class="form" onsubmit="return false">
+      <h3>Request a Free Quote</h3>
+      <p>Fill this in and we will get back to you shortly.</p>
+      <input placeholder="Your name" required>
+      <input placeholder="Phone number" type="tel" required>
+      <input placeholder="Email address" type="email">
+      <select><option>What do you need help with?</option><option>🔌</option><option>📦</option><option>💡</option><option>🔔</option><option>🔍</option><option>📋</option></select>
+      <textarea rows="4" placeholder="Tell us about the job..."></textarea>
+      <button class="btn btn-blue" type="submit">Send Enquiry →</button>
+    </form>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div>
+    <div class="flogo"><span>Bennett</span> Electrical Services</div>
+    <div style="margin-top:8px">Electricians in Birmingham &amp; Solihull serving Birmingham.</div>
+  </div>
+  <div>© 2026 Bennett Electrical Services. All rights reserved.</div>
+</div>
+<div class="wrap"><div class="mocknote">
+<span class="badge">✦ Concept by <a href="https://altuswebsolutions.com">Altus Web Solutions</a> ✦</span>
+<p>Free homepage concept crafted exclusively for Bennett Electrical Services. Your photos, logo and details slot straight in — <a href="https://altuswebsolutions.com">ask us</a> about the full website.</p>
+</div></div>
+</footer>
+
+</body>
+</html>
